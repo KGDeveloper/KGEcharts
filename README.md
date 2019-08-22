@@ -2,7 +2,7 @@
 一个扇形统计图以及折线统计，后续会不断更新其他统计图，并且完善现有功能以及新增拓展性
 
 <img src=http://chuantu.xyz/t6/702/1566442687x1031866013.png /> 
-<img src=http://chuantu.xyz/t6/702/1566442717x1031866013.png />
+<img src=http://chuantu.xyz/t6/702/1566442892x1033347913.png />
 
 1.扇形统计图KGPieView
 
