@@ -1,25 +1,22 @@
 # KGEcharts
 一个扇形统计图以及折线统计，后续会不断更新其他统计图，并且完善现有功能以及新增拓展性
 
-<Img src="http://chuantu.xyz/t6/702/1566377491x1033347913.png"/> <Img src="http://chuantu.xyz/t6/702/1566377985x1033347913.png"/>
+<img src=http://chuantu.xyz/t6/702/1566442687x1031866013.png /> 
+<img src=http://chuantu.xyz/t6/702/1566442717x1031866013.png />
 
 1.扇形统计图KGPieView
 
-2.折线统计图KGLineView
-
-3.使用示例：
+2.使用示例：
 ```
 
 #import "KGChartViewController.h"
 #import <KGEcharts/KGEcharts.h>
 
 //在此遵守数据设置代理
-@interface KGChartViewController ()<KGPieViewDelegate,KGPieViewDataSource,KGLineViewDataSource,KGLineViewDelegate>
+@interface KGChartViewController ()<KGPieViewDelegate,KGPieViewDataSource>
 
 //扇形统计图
 @property (nonatomic,strong) KGPieView *pieView;
-//折线统计图
-@property (nonatomic,strong) KGLineView *lineView;
 
 @end
 
@@ -29,8 +26,6 @@
     [super viewDidLoad];
     
     [self.pieView reloadData];
-    [self.view bringSubviewToFront:self.lineView];
-    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -76,6 +71,39 @@
 
 - (NSArray *)pieChartsViewSlieViewTitle{
     return @[@"北京",@"上海",@"广州",@"深圳",@"天津"];
+}
+
+@end
+
+```
+
+
+1.折线统计图KGLineView
+
+<img src=http://chuantu.xyz/t6/702/1566442742x1033347913.png />
+<img src=http://chuantu.xyz/t6/702/1566442762x1031866013.png />
+
+2.使用示例：
+```
+
+#import "KGChartViewController.h"
+#import <KGEcharts/KGEcharts.h>
+
+//在此遵守数据设置代理
+@interface KGChartViewController ()<KGLineViewDataSource,KGLineViewDelegate>
+
+//折线统计图
+@property (nonatomic,strong) KGLineView *lineView;
+
+@end
+
+@implementation KGChartViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self.view bringSubviewToFront:self.lineView];
+    
 }
 
 //懒加载初始化折线统计图
@@ -143,3 +171,6 @@
 @end
 
 ```
+
+
+
